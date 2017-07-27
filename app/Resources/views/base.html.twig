@@ -2,12 +2,47 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}Indohouse Real Estate{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
+	<link rel="icon" type="image/x-icon" href="{{ asset('icon.png') }}" />
+	<meta name="viewport" content="width=device-widht, initial-scale=1">
     </head>
+    
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+      <header>
+ <div class="navbar-default navbar-fixed-top">
+      <div class="container">
+	<div class="nav-header">
+	   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+          </button>
+	  <a href="#" class="navbar-brand"><i></i></a>
+	  <h2><a href="base.html.twig"><i class="icon-home"><img width="50px" src="{{asset('icon.png')}}" /></i>IndoHouse<span>RealEstate</span></a></h2>
+				
+	</div>
+      </div>
+    </div>
+</header>
+   
+    <main>
+      {% block body %}
+      {% endblock %}
+    </main>
+      <footer class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3" aria-expanded="false" aria-controls="navbar3">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span></button>
+	    <span class="navbar-brand">IndoHouse RealEstate - Copyright 2017 ©</span>
+	</div>
+    </footer>
+    {% block javascripts %}
+    {% endblock %}
+  </body>
 </html>
