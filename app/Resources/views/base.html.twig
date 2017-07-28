@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Indohouse Real Estate{% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
-	<link rel="icon" type="image/x-icon" href="{{ asset('icon.png') }}" />
-	<meta name="viewport" content="width=device-widht, initial-scale=1">
-    </head>
-    
-    <body>
-      <header>
- <div class="navbar-default navbar-fixed-top">
-      <div class="container">
-	<div class="nav-header">
-	   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-          </button>
-	  <a href="#" class="navbar-brand"><i></i></a>
-	  <h2><a href="/home/"><i class="icon-home"><img width="50px" src="{{asset('icon.png')}}" /></i>IndoHouse<span>RealEstate</span></a></h2>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Indohouse Real Estate{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('icon.png') }}" />
+    <meta name="viewport" content="width=device-widht, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="{{ asset('css/mystyle.css') }}" />
+  </head>
+  
+  <body>
+    <header>
+      <div class="navbar-default navbar-fixed-top">
+	<div class="container">
+	  <div class="nav-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+            </button>
+	    <a class="navbar-brand" href="/">
+	      <ul><img width="60px" src="{{asset('icon.png')}}" /><font color = "#48D1CC" size="6" > IndoHouse RealEstate </font></ul></a>
+	</div>
+	<div id="navbar" class="collapse navbar-collapse">
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="/">Properties</a></li>
+	      <li><a href="/">Agent</a></li>
+	      <li><a href="/">Contact</a></li>
+	      <li><a href="/"><i class="icon-login"><img width="20px" src="{{asset('login.png')}}" /></i>Login</a></li>
+	  </div>
 	</div>
       </div>
-    </div>
-</header>
-   
+    </header>
+    
     <main>
       {% block body %}
       {% endblock %}
     </main>
-      <footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
       <div class="container">
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3" aria-expanded="false" aria-controls="navbar3">
@@ -38,7 +46,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span></button>
-	    <span class="navbar-brand">IndoHouse RealEstate - Copyright 2017 ©</span>
+	  <span class="navbar"><font color = "#F5FFFA"> IndoHouse RealEstate - Copyright 2017 ©</font></span>
 	</div>
     </footer>
     {% block javascripts %}
