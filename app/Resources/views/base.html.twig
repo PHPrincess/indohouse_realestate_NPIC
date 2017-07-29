@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{ asset('icon.png') }}" />
     <meta name="viewport" content="width=device-widht, initial-scale=1">
-     <link rel="stylesheet" type="text/css" href="{{ asset('css/mystyle.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/mystyle.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}" />
   </head>
   
   <body>
@@ -28,17 +29,50 @@
 	      <li><a href="/">Properties</a></li>
 	      <li><a href="/">Agent</a></li>
 	      <li><a href="/">Contact</a></li>
-	      <li><a href="/"><i class="icon-login"><img width="20px" src="{{asset('login.png')}}" /></i>Login</a></li>
-	  </div>
+	      <li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+		<img width="20px" src="{{asset('login.png')}}">Login</a></li>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="{{ asset('avatar2.png') }}" alt="avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+<br>
+      <input type="username" placeholder="User name" name="uname" required>
+
+      <br>
+      <br>
+      <label><b>Password</b></label>
+<br>
+      <input type="password" placeholder="Password" name="psw" required>
+      <br>
+      <br>
+      <button type="submit">Login</button> 
+<br>  <input type="checkbox" checked="checked">Remember me
+    </div>
+    <div style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+</div>
 	</div>
       </div>
+      
     </header>
     
     <main>
       {% block body %}
       {% endblock %}
     </main>
-    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <footer class="navbar navbar-inverse navbar-static-bottom">
       <div class="container">
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3" aria-expanded="false" aria-controls="navbar3">
